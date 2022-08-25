@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class CustomUserDetailsService implements UserDetailsService{
+public class UserDetailsServiceImpl implements UserDetailsService{
 	private final UserRepository userRepository;
 	@Override
 	public UserDetails loadUserByUsername(String email) {

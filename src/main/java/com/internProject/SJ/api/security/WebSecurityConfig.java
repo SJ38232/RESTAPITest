@@ -15,14 +15,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.internProject.SJ.api.jwt.JwtAuthenticationFilter;
 import com.internProject.SJ.api.jwt.JwtTokenProvider;
-import com.internProject.SJ.api.service.CustomUserDetailsService;
+import com.internProject.SJ.api.service.UserDetailsServiceImpl;
 
 import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	private final JwtTokenProvider jwtTokenProvider;
-	private final CustomUserDetailsService customUserDetailsService;
+	private final UserDetailsServiceImpl userDetailsServiceImpl;
 	@Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
