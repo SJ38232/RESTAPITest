@@ -1,0 +1,5 @@
+2022-08-30 11:56:23 403 POST /api/users/login?email=user1@example.com&password=123 HTTP/1.1 PostmanRuntime/7.29.2 - 0:0:0:0:0:0:0:1 115
+2022-08-30 11:56:30 200 POST /api/users/login?email=user1@example.com&password=1234 HTTP/1.1 PostmanRuntime/7.29.2 - 0:0:0:0:0:0:0:1 438
+2022-08-30 11:56:51 405 GET /api/users/regist?email=user1@example.com&password=1234 HTTP/1.1 PostmanRuntime/7.29.2 - 0:0:0:0:0:0:0:1 125
+2022-08-30 11:56:54 200 POST /api/users/regist?email=user1@example.com&password=1234 HTTP/1.1 PostmanRuntime/7.29.2 - 0:0:0:0:0:0:0:1 117
+2022-08-30 12:13:28 200 POST /api/users/login?email=user1@example.com&password=1234 HTTP/1.1 PostmanRuntime/7.29.2 - 0:0:0:0:0:0:0:1 438
