@@ -20,11 +20,8 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 	private final UserRepository userRepository;
 	@Override
 	public UserDetails loadUserByUsername(String email) {
-		log.info(email);
 		User user = userRepository.findByEmail(email);
-		log.info(user.getEmail());
-		UserDetails userDetails = userRepository.findByEmail(email);
-		log.info(userDetails.getUsername());
+		UserDetails userDetails = userRepository.findByEmail(email);;
 		return userDetails;
 	}
 }

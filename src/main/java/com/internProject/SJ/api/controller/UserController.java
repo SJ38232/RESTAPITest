@@ -31,7 +31,6 @@ public class UserController {
 	 }
 	 @PostMapping("/login")
 	 public ResponseEntity<?> login(@Validated User user, Errors errors){
-		 log.info("Controller/login");
 		 if(errors.hasErrors()) {
 			 return response.invalidFields(response.createErrorList(errors));
 		 }	
