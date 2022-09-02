@@ -1,4 +1,4 @@
-package com.internProject.SJ.api.filter;
+package com.internProject.SJ.api.config;
 
 import org.springframework.util.StreamUtils;
 

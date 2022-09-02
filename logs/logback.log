@@ -1,84 +1,661 @@
-2022-08-31 22:11:58.673 [background-preinit] [traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
-2022-08-31 22:11:58.682 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-5FUSIHV with PID 25208 (C:\Users\tjrwn\git\RESTAPITest\target\classes started by tjrwn in C:\Users\tjrwn\git\RESTAPITest)
-2022-08-31 22:11:58.683 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2022-08-31 22:11:59.489 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-2022-08-31 22:11:59.492 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-31 22:11:59.671 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 168 ms. Found 1 JPA repository interfaces.
-2022-08-31 22:11:59.688 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-2022-08-31 22:11:59.690 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-08-31 22:11:59.709 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2022-08-31 22:11:59.710 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-08-31 22:12:00.405 [main] [traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-2022-08-31 22:12:00.419 [main] [traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-2022-08-31 22:12:00.420 [main] [traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-2022-08-31 22:12:00.421 [main] [traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-31 22:12:00.576 [main] [traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-2022-08-31 22:12:00.577 [main] [traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1843 ms
-2022-08-31 22:12:00.749 [main] [traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-31 22:12:00.810 [main] [traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-31 22:12:00.990 [main] [traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-31 22:12:01.107 [main] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-2022-08-31 22:12:01.319 [main] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-2022-08-31 22:12:01.375 [main] [traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-08-31 22:12:02.181 [main] [traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-31 22:12:02.192 [main] [traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-31 22:12:02.619 [main] [traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-31 22:12:02.744 [main] [traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2bb84aa5. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-08-31 22:12:02.745 [main] [traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2bb84aa5
-2022-08-31 22:12:02.804 [main] [traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3472f3ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e557671, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d373794, org.springframework.security.web.header.HeaderWriterFilter@5400db7e, org.springframework.security.web.authentication.logout.LogoutFilter@1477d4e6, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@1f2497d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c07023, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41f5389f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f1f2f84, org.springframework.security.web.session.SessionManagementFilter@12478b4e, org.springframework.security.web.access.ExceptionTranslationFilter@151d216e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2689b752]
-2022-08-31 22:12:03.566 [main] [traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
-2022-08-31 22:12:03.591 [main] [traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-2022-08-31 22:12:03.601 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 5.435 seconds (JVM running for 6.294)
-2022-08-31 22:12:07.749 [http-nio-8080-exec-2] [traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-31 22:12:07.749 [http-nio-8080-exec-2] [traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-2022-08-31 22:12:07.751 [http-nio-8080-exec-2] [traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-2022-08-31 22:12:07.792 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.filter.LoggingFilter.logRequest - Request : POST uri=[/api/users/loginemail=admin@example.com&password=1234] content-type=[null]
-2022-08-31 22:12:08.216 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.service.UserServiceImpl.login - [admin]
-2022-08-31 22:12:08.278 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1MzMyOH0.m0AmTlU1GXJxcBotd6IzMMPZ8o0AmNSB3rGQZxqFkuw
-2022-08-31 22:12:08.280 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI1NTYzMjh9.p9MXOd5MND6pLKHhid44TDXmvV5yTpSHLvhpW75f6G4
-2022-08-31 22:12:08.281 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1MzMyOH0.m0AmTlU1GXJxcBotd6IzMMPZ8o0AmNSB3rGQZxqFkuw
-2022-08-31 22:12:08.325 [http-nio-8080-exec-2] [traceId=7992a647-f64b-444e-b127-8ba54b94f86c] INFO  c.i.SJ.api.filter.LoggingFilter.logPayload - Response Payload: {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1MzMyOH0.m0AmTlU1GXJxcBotd6IzMMPZ8o0AmNSB3rGQZxqFkuw","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI1NTYzMjh9.p9MXOd5MND6pLKHhid44TDXmvV5yTpSHLvhpW75f6G4","refreshTokenExpirationTime":604800000},"error":[]}
-2022-08-31 22:19:09.947 [RMI TCP Connection(14)-127.0.0.1] [traceId=] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-2022-08-31 22:19:09.995 [RMI TCP Connection(14)-127.0.0.1] [traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-08-31 22:19:09.998 [RMI TCP Connection(14)-127.0.0.1] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-2022-08-31 22:19:10.011 [RMI TCP Connection(14)-127.0.0.1] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-2022-08-31 22:25:26.069 [background-preinit] [traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
-2022-08-31 22:25:26.077 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-5FUSIHV with PID 15628 (C:\Users\tjrwn\git\RESTAPITest\target\classes started by tjrwn in C:\Users\tjrwn\git\RESTAPITest)
-2022-08-31 22:25:26.077 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
-2022-08-31 22:25:26.883 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-2022-08-31 22:25:26.886 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-08-31 22:25:27.074 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 175 ms. Found 1 JPA repository interfaces.
-2022-08-31 22:25:27.091 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-2022-08-31 22:25:27.093 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-08-31 22:25:27.114 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2022-08-31 22:25:27.114 [main] [traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-2022-08-31 22:25:27.815 [main] [traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-2022-08-31 22:25:27.827 [main] [traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
-2022-08-31 22:25:27.828 [main] [traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-2022-08-31 22:25:27.828 [main] [traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-08-31 22:25:27.989 [main] [traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-2022-08-31 22:25:27.990 [main] [traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1861 ms
-2022-08-31 22:25:28.187 [main] [traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-08-31 22:25:28.251 [main] [traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-08-31 22:25:28.434 [main] [traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-08-31 22:25:28.553 [main] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-2022-08-31 22:25:28.757 [main] [traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-2022-08-31 22:25:28.795 [main] [traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2022-08-31 22:25:29.557 [main] [traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-08-31 22:25:29.568 [main] [traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-08-31 22:25:30.014 [main] [traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-08-31 22:25:30.160 [main] [traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@44e7c06b. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-08-31 22:25:30.161 [main] [traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@44e7c06b
-2022-08-31 22:25:30.220 [main] [traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14b4d90b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@638341b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@396c1228, org.springframework.security.web.header.HeaderWriterFilter@75507e68, org.springframework.security.web.authentication.logout.LogoutFilter@510bd87a, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@7962c1d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f584d0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32f45e15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56226064, org.springframework.security.web.session.SessionManagementFilter@2681185e, org.springframework.security.web.access.ExceptionTranslationFilter@31de8099, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e557671]
-2022-08-31 22:25:30.980 [main] [traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
-2022-08-31 22:25:31.010 [main] [traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-2022-08-31 22:25:31.022 [main] [traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 5.466 seconds (JVM running for 6.312)
-2022-08-31 22:25:42.158 [http-nio-8080-exec-1] [traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-08-31 22:25:42.158 [http-nio-8080-exec-1] [traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-2022-08-31 22:25:42.159 [http-nio-8080-exec-1] [traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-2022-08-31 22:25:42.194 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.filter.LoggingFilter.logRequest - Request : POST uri=[/api/users/loginemail=admin@example.com&password=1234] content-type=[null]
-2022-08-31 22:25:42.589 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.service.UserServiceImpl.login - [admin]
-2022-08-31 22:25:42.660 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1NDE0Mn0.C9KF7lcKV4xl8BcVk4YjNRQ3-8nB_g2LQV6cza5s2gA
-2022-08-31 22:25:42.662 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI1NTcxNDJ9.aeOrmMbtlhZKCjiZYS2UPE705jk82iYS8UmeCX-_F9o
-2022-08-31 22:25:42.663 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1NDE0Mn0.C9KF7lcKV4xl8BcVk4YjNRQ3-8nB_g2LQV6cza5s2gA
-2022-08-31 22:25:42.701 [http-nio-8080-exec-1] [traceId=5309e8c8-44a2-4768-a026-46bfb91762d4] INFO  c.i.SJ.api.filter.LoggingFilter.logPayload - Response Payload: {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImF1dGgiOiJhZG1pbiIsImV4cCI6MTY2MTk1NDE0Mn0.C9KF7lcKV4xl8BcVk4YjNRQ3-8nB_g2LQV6cza5s2gA","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI1NTcxNDJ9.aeOrmMbtlhZKCjiZYS2UPE705jk82iYS8UmeCX-_F9o","refreshTokenExpirationTime":604800000},"error":[]}
+2022-09-02 07:47:39.818[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 07:47:39.822[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 5196 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 07:47:39.825[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 07:47:40.389[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:47:40.392[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 07:47:40.544[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 144 ms. Found 2 JPA repository interfaces.
+2022-09-02 07:47:40.561[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:47:40.562[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 07:47:40.581[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:47:40.582[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:47:40.582[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-09-02 07:47:41.100[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 07:47:41.110[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 07:47:41.111[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 07:47:41.111[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 07:47:41.213[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 07:47:41.214[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1347 ms
+2022-09-02 07:47:41.324[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 07:47:41.378[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 07:47:41.531[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 07:47:41.617[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 07:47:52.673[traceId=] ERROR com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 50 common frames omitted
+2022-09-02 07:47:52.674[traceId=] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator.initiateService - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:331)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:241)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:109)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	... 50 common frames omitted
+2022-09-02 07:47:52.676[traceId=] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-02 07:47:52.676[traceId=] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-02 07:47:52.679[traceId=] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2022-09-02 07:47:52.689[traceId=] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-02 07:47:52.707[traceId=] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:138)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2022-09-02 07:51:01.943[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 07:51:01.952[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 5816 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 07:51:01.952[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 07:51:02.462[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:51:02.464[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 07:51:02.581[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 110 ms. Found 2 JPA repository interfaces.
+2022-09-02 07:51:02.594[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:51:02.595[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 07:51:02.617[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:51:02.618[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:51:02.619[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2022-09-02 07:51:03.045[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 07:51:03.054[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 07:51:03.055[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 07:51:03.055[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 07:51:03.155[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 07:51:03.156[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1166 ms
+2022-09-02 07:51:03.260[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 07:51:03.304[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 07:51:03.442[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 07:51:03.511[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 07:51:04.727[traceId=] ERROR com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: ġ��������: ȣ��Ʈ "192.168.182.76", ����� "postgres", �����ͺ��̽� "restapitest", SSL ���� ���ῡ ���� ������ pg_hba.conf ���Ͽ� �����ϴ�.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+	Suppressed: org.postgresql.util.PSQLException: ġ��������: ȣ��Ʈ "192.168.182.76", ����� "postgres", �����ͺ��̽� "restapitest", SSL ���� ���ῡ ���� ������ pg_hba.conf ���Ͽ� �����ϴ�.
+		at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+		at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+		at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:244)
+		... 50 common frames omitted
+2022-09-02 07:51:04.729[traceId=] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator.initiateService - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: ġ��������: ȣ��Ʈ "192.168.182.76", ����� "postgres", �����ͺ��̽� "restapitest", SSL ���� ���ῡ ���� ������ pg_hba.conf ���Ͽ� �����ϴ�.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+	Suppressed: org.postgresql.util.PSQLException: ġ��������: ȣ��Ʈ "192.168.182.76", ����� "postgres", �����ͺ��̽� "restapitest", SSL ���� ���ῡ ���� ������ pg_hba.conf ���Ͽ� �����ϴ�.
+		at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+		at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+		at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:244)
+		... 50 common frames omitted
+2022-09-02 07:51:04.739[traceId=] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-02 07:51:04.739[traceId=] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-09-02 07:51:04.742[traceId=] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2022-09-02 07:51:04.751[traceId=] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-02 07:51:04.765[traceId=] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.internProject.SJ.RestapiTestApplication.main(RestapiTestApplication.java:10)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:138)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2022-09-02 07:59:15.432[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 07:59:15.438[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 101372 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 07:59:15.439[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 07:59:15.971[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:59:15.972[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 07:59:16.082[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 103 ms. Found 2 JPA repository interfaces.
+2022-09-02 07:59:16.094[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 07:59:16.095[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 07:59:16.110[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:59:16.110[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 07:59:16.111[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-09-02 07:59:16.556[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 07:59:16.566[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 07:59:16.566[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 07:59:16.566[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 07:59:16.668[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 07:59:16.669[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1191 ms
+2022-09-02 07:59:16.783[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 07:59:16.828[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 07:59:16.964[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 07:59:17.039[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 07:59:17.146[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 07:59:17.172[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 07:59:17.791[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 07:59:17.798[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 07:59:18.133[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 07:59:18.340[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7eb94590. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 07:59:18.342[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7eb94590
+2022-09-02 07:59:18.381[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@548c5127, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35630ee8, org.springframework.security.web.context.SecurityContextPersistenceFilter@29c76d75, org.springframework.security.web.header.HeaderWriterFilter@5bfdabf3, org.springframework.security.web.authentication.logout.LogoutFilter@37f7ce20, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@6e80de85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17344d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a490518, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@173b24c4, org.springframework.security.web.session.SessionManagementFilter@5089a72b, org.springframework.security.web.access.ExceptionTranslationFilter@2c9aeec6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@669469c9]
+2022-09-02 07:59:18.808[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 07:59:18.831[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-02 07:59:18.839[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 3.764 seconds (JVM running for 4.397)
+2022-09-02 08:11:26.281[traceId=] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+2022-09-02 08:11:26.411[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 08:11:26.431[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2022-09-02 08:11:26.443[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2022-09-02 08:11:28.647[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 08:11:28.647[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 114460 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 08:11:28.649[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 08:11:29.192[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 08:11:29.195[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 08:11:29.313[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+2022-09-02 08:11:29.327[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 08:11:29.328[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 08:11:29.348[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 08:11:29.349[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 08:11:29.349[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-09-02 08:11:29.796[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 08:11:29.806[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 08:11:29.807[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 08:11:29.807[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 08:11:29.906[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 08:11:29.907[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1222 ms
+2022-09-02 08:11:30.015[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 08:11:30.067[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 08:11:30.231[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 08:11:30.307[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 08:11:30.403[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 08:11:30.429[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 08:11:30.997[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 08:11:31.004[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 08:11:31.297[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 08:11:31.480[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@78ab63b5. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 08:11:31.481[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@78ab63b5
+2022-09-02 08:11:31.519[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2afe825a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49c6ee4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a490518, org.springframework.security.web.header.HeaderWriterFilter@2041c9a3, org.springframework.security.web.authentication.logout.LogoutFilter@1e5e2e06, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@4dd425dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32ae11c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628aea61, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4549d616, org.springframework.security.web.session.SessionManagementFilter@670aac24, org.springframework.security.web.access.ExceptionTranslationFilter@4efa7d2f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35630ee8]
+2022-09-02 08:11:31.872[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 08:11:31.891[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-02 08:11:31.899[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 3.593 seconds (JVM running for 4.209)
+2022-09-02 08:11:41.363[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-02 08:11:41.364[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-09-02 08:11:41.368[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 3 ms
+2022-09-02 08:11:41.873[traceId=185346a9-8f33-4886-bd0a-405978071124] INFO  c.i.SJ.api.service.UserServiceImpl.login - [USER]
+2022-09-02 08:11:41.978[traceId=185346a9-8f33-4886-bd0a-405978071124] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc1NzAxfQ.YSegmSck7y5zGD05Z-TlVaEECq4AaW2zGD2V1VhXJP8
+2022-09-02 08:11:41.979[traceId=185346a9-8f33-4886-bd0a-405978071124] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2Nzg3MDF9.TSJbBZwKgDYKS2OrihdBzMPLu8toEK2yF03F_ogDlzs
+2022-09-02 08:11:41.980[traceId=185346a9-8f33-4886-bd0a-405978071124] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc1NzAxfQ.YSegmSck7y5zGD05Z-TlVaEECq4AaW2zGD2V1VhXJP8
+2022-09-02 08:11:42.027[traceId=185346a9-8f33-4886-bd0a-405978071124] INFO  c.i.SJ.api.config.LogInterceptor.postHandle - HTTP/1.1 /api/users/login POST 192.168.182.76 8080  2022-09-02 08:11:41.413 127.0.0.1 127.0.0.1 2022-09-02 08:11:42.021 {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc1NzAxfQ.YSegmSck7y5zGD05Z-TlVaEECq4AaW2zGD2V1VhXJP8","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2Nzg3MDF9.TSJbBZwKgDYKS2OrihdBzMPLu8toEK2yF03F_ogDlzs","refreshTokenExpirationTime":604800000},"error":[]}
+2022-09-02 08:17:32.147[traceId=] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m31s614ms45µs900ns).
+2022-09-02 08:20:36.701[traceId=] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m34s538ms775µs).
+2022-09-02 08:27:03.964[traceId=b3ba7f0e-6de8-4e72-90df-b51f15a86216] INFO  c.i.SJ.api.service.UserServiceImpl.login - [USER]
+2022-09-02 08:27:04.084[traceId=b3ba7f0e-6de8-4e72-90df-b51f15a86216] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc2NjIzfQ.6H9gU7J4XE9Z0Dj9hXICAvi_WKDGHLGFwL2TCKs6NAY
+2022-09-02 08:27:04.094[traceId=b3ba7f0e-6de8-4e72-90df-b51f15a86216] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2Nzk2MjN9.Q__yEuu6IE4MGRKsDJkkwsa269FUgxWs8RyidAUB7i8
+2022-09-02 08:27:04.103[traceId=b3ba7f0e-6de8-4e72-90df-b51f15a86216] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc2NjIzfQ.6H9gU7J4XE9Z0Dj9hXICAvi_WKDGHLGFwL2TCKs6NAY
+2022-09-02 08:27:04.154[traceId=b3ba7f0e-6de8-4e72-90df-b51f15a86216] INFO  c.i.SJ.api.config.LogInterceptor.postHandle - HTTP/1.1 /api/users/login POST 192.168.182.18 8080  2022-09-02 08:27:03.294 127.0.0.1 127.0.0.1 2022-09-02 08:27:04.154 {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc2NjIzfQ.6H9gU7J4XE9Z0Dj9hXICAvi_WKDGHLGFwL2TCKs6NAY","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2Nzk2MjN9.Q__yEuu6IE4MGRKsDJkkwsa269FUgxWs8RyidAUB7i8","refreshTokenExpirationTime":604800000},"error":[]}
+2022-09-02 08:53:50.583[traceId=] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s395ms116µs600ns).
+2022-09-02 09:01:20.397[traceId=5ca3c4f7-522f-4341-b737-c475c908d0d8] INFO  c.i.SJ.api.service.UserServiceImpl.login - [USER]
+2022-09-02 09:01:20.413[traceId=5ca3c4f7-522f-4341-b737-c475c908d0d8] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NjgwfQ.AVrS7fyL36RMwsNlfDOGfiBWSGLfcetOf8rxPcwfglI
+2022-09-02 09:01:20.414[traceId=5ca3c4f7-522f-4341-b737-c475c908d0d8] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODE2ODB9.GqsJis2nfQSTeeOPJ4GHiuRW5Op2JW1zAgVpZGKFNm0
+2022-09-02 09:01:20.414[traceId=5ca3c4f7-522f-4341-b737-c475c908d0d8] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NjgwfQ.AVrS7fyL36RMwsNlfDOGfiBWSGLfcetOf8rxPcwfglI
+2022-09-02 09:01:20.421[traceId=5ca3c4f7-522f-4341-b737-c475c908d0d8] INFO  c.i.SJ.api.config.LogInterceptor.postHandle - HTTP/1.1 /api/users/login POST 192.168.182.18 8080  2022-09-02 09:01:20.259 127.0.0.1 127.0.0.1 2022-09-02 09:01:20.421 {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NjgwfQ.AVrS7fyL36RMwsNlfDOGfiBWSGLfcetOf8rxPcwfglI","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODE2ODB9.GqsJis2nfQSTeeOPJ4GHiuRW5Op2JW1zAgVpZGKFNm0","refreshTokenExpirationTime":604800000},"error":[]}
+2022-09-02 09:01:24.119[traceId=] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+2022-09-02 09:01:24.337[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:01:24.353[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2022-09-02 09:01:24.376[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2022-09-02 09:01:26.179[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 09:01:26.188[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 101668 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 09:01:26.188[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 09:01:26.645[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:01:26.645[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 09:01:26.790[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 128 ms. Found 2 JPA repository interfaces.
+2022-09-02 09:01:26.805[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:01:26.805[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 09:01:26.821[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:01:26.821[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:01:26.821[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2022-09-02 09:01:27.233[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 09:01:27.249[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:27.249[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 09:01:27.249[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 09:01:27.343[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 09:01:27.344[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1136 ms
+2022-09-02 09:01:27.446[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 09:01:27.490[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 09:01:27.624[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 09:01:27.700[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 09:01:27.796[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 09:01:27.819[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 09:01:28.304[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 09:01:28.311[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:01:28.594[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 09:01:28.782[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7eb94590. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 09:01:28.783[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@7eb94590
+2022-09-02 09:01:28.816[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@548c5127, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35630ee8, org.springframework.security.web.context.SecurityContextPersistenceFilter@29c76d75, org.springframework.security.web.header.HeaderWriterFilter@5bfdabf3, org.springframework.security.web.authentication.logout.LogoutFilter@37f7ce20, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@6e80de85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17344d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a490518, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@173b24c4, org.springframework.security.web.session.SessionManagementFilter@5089a72b, org.springframework.security.web.access.ExceptionTranslationFilter@2c9aeec6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@669469c9]
+2022-09-02 09:01:29.185[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:29.204[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-02 09:01:29.211[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 3.316 seconds (JVM running for 3.766)
+2022-09-02 09:01:45.203[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-02 09:01:45.203[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-09-02 09:01:45.204[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2022-09-02 09:01:45.512[traceId=f045f9d6-583a-4c53-a994-6e735cbb6956] INFO  c.i.SJ.api.service.UserServiceImpl.login - [USER]
+2022-09-02 09:01:45.562[traceId=f045f9d6-583a-4c53-a994-6e735cbb6956] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NzA1fQ.y0zT-ksxg1KEi-qbDCnNZP0lReYYTgQv0OtX0hgq8go
+2022-09-02 09:01:45.563[traceId=f045f9d6-583a-4c53-a994-6e735cbb6956] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODE3MDV9.lgaCsvLHxGmHI1WGbaW2JCrAfcNBLEDzmNVVxVxrWiQ
+2022-09-02 09:01:45.564[traceId=f045f9d6-583a-4c53-a994-6e735cbb6956] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NzA1fQ.y0zT-ksxg1KEi-qbDCnNZP0lReYYTgQv0OtX0hgq8go
+2022-09-02 09:01:45.591[traceId=f045f9d6-583a-4c53-a994-6e735cbb6956] INFO  c.i.SJ.api.config.LogInterceptor.postHandle - HTTP/1.1 /api/users/login POST 192.168.182.18 8080  2022-09-02 09:01:45.229 127.0.0.1 127.0.0.1 2022-09-02 09:01:45.587 {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc4NzA1fQ.y0zT-ksxg1KEi-qbDCnNZP0lReYYTgQv0OtX0hgq8go","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODE3MDV9.lgaCsvLHxGmHI1WGbaW2JCrAfcNBLEDzmNVVxVxrWiQ","refreshTokenExpirationTime":604800000},"error":[]}
+2022-09-02 09:01:54.162[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 09:01:54.171[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 107800 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 09:01:54.172[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 09:01:54.698[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:01:54.699[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 09:01:54.818[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+2022-09-02 09:01:54.830[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:01:54.831[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 09:01:54.844[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:01:54.845[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:01:54.845[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-09-02 09:01:55.275[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 09:01:55.284[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:55.285[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 09:01:55.285[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 09:01:55.375[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 09:01:55.376[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1169 ms
+2022-09-02 09:01:55.499[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 09:01:55.545[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 09:01:55.717[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 09:01:55.810[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 09:01:55.929[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 09:01:55.960[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 09:01:56.551[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 09:01:56.560[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:01:56.876[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 09:01:57.097[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2eb03908. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 09:01:57.097[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2eb03908
+2022-09-02 09:01:57.136[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@481c1e92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66f223fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@4281a26f, org.springframework.security.web.header.HeaderWriterFilter@1c09bb7a, org.springframework.security.web.authentication.logout.LogoutFilter@45b2d17b, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@7ac47f14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a1e578f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ee95d42, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3eb641a8, org.springframework.security.web.session.SessionManagementFilter@72b6fa98, org.springframework.security.web.access.ExceptionTranslationFilter@48928b57, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@200e6029]
+2022-09-02 09:01:57.536[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:57.541[traceId=] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-09-02 09:01:57.553[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:01:57.555[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2022-09-02 09:01:57.559[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2022-09-02 09:01:57.562[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:57.562[traceId=] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+2022-09-02 09:01:57.567[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:57.568[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:01:57.574[traceId=] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-09-02 09:01:57.592[traceId=] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-09-02 09:02:05.733[traceId=] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+2022-09-02 09:02:05.760[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:02:05.761[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2022-09-02 09:02:05.763[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2022-09-02 09:02:11.538[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 09:02:11.549[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 91984 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 09:02:11.550[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 09:02:12.080[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:02:12.081[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 09:02:12.202[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2022-09-02 09:02:12.215[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:02:12.216[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 09:02:12.228[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:02:12.229[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:02:12.229[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-09-02 09:02:12.640[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 09:02:12.648[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:02:12.649[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 09:02:12.649[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 09:02:12.736[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 09:02:12.737[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1152 ms
+2022-09-02 09:02:12.851[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 09:02:12.900[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 09:02:13.049[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 09:02:13.128[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 09:02:13.221[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 09:02:13.247[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 09:02:13.805[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 09:02:13.813[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:02:14.105[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 09:02:14.293[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2b9615cb. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 09:02:14.294[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@2b9615cb
+2022-09-02 09:02:14.329[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d782a4a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cc91fe3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1832b0f6, org.springframework.security.web.header.HeaderWriterFilter@48928b57, org.springframework.security.web.authentication.logout.LogoutFilter@758655a9, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@481c1e92, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4281a26f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f245168, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66f223fa, org.springframework.security.web.session.SessionManagementFilter@65f36591, org.springframework.security.web.access.ExceptionTranslationFilter@5bfdc92b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d5958d3]
+2022-09-02 09:02:14.699[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:02:14.722[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-02 09:02:14.730[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 3.551 seconds (JVM running for 4.185)
+2022-09-02 09:02:17.954[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-02 09:02:17.954[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-09-02 09:02:17.955[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 0 ms
+2022-09-02 09:09:07.672[traceId=] INFO  o.h.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 6.2.3.Final
+2022-09-02 09:09:07.684[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarting - Starting RestapiTestApplication using Java 17.0.3 on DESKTOP-Q2BRCVT with PID 89984 (C:\Users\Administrator\git\RESTAPITest\target\classes started by Administrator in C:\Users\Administrator\git\RESTAPITest)
+2022-09-02 09:09:07.685[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2022-09-02 09:09:08.202[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:09:08.204[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-02 09:09:08.337[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 126 ms. Found 2 JPA repository interfaces.
+2022-09-02 09:09:08.351[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-02 09:09:08.352[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-09-02 09:09:08.365[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.LogDataRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:09:08.366[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.internProject.SJ.api.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-09-02 09:09:08.366[traceId=] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-09-02 09:09:08.812[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2022-09-02 09:09:08.822[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:09:08.823[traceId=] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+2022-09-02 09:09:08.823[traceId=] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-02 09:09:08.913[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+2022-09-02 09:09:08.913[traceId=] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1188 ms
+2022-09-02 09:09:09.019[traceId=] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-02 09:09:09.055[traceId=] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-02 09:09:09.175[traceId=] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-02 09:09:09.249[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+2022-09-02 09:09:09.342[traceId=] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2022-09-02 09:09:09.366[traceId=] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-02 09:09:09.896[traceId=] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-02 09:09:09.904[traceId=] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-02 09:09:10.223[traceId=] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-02 09:09:10.404[traceId=] WARN  o.s.s.c.a.web.builders.WebSecurity.performBuild - You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@330d16af. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-09-02 09:09:10.404[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@330d16af
+2022-09-02 09:09:10.444[traceId=] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4280b20b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50e4d8cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b18b308, org.springframework.security.web.header.HeaderWriterFilter@707b38a1, org.springframework.security.web.authentication.logout.LogoutFilter@2e5c245d, com.internProject.SJ.api.jwt.JwtAuthenticationFilter@4b37d1a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e015ac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34588991, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34114276, org.springframework.security.web.session.SessionManagementFilter@7c1c0892, org.springframework.security.web.access.ExceptionTranslationFilter@726e29d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@893081e]
+2022-09-02 09:09:10.801[traceId=] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2022-09-02 09:09:10.821[traceId=] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-02 09:09:10.828[traceId=] INFO  c.i.SJ.RestapiTestApplication.logStarted - Started RestapiTestApplication in 3.538 seconds (JVM running for 4.224)
+2022-09-02 09:09:13.812[traceId=] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-02 09:09:13.813[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2022-09-02 09:09:13.814[traceId=] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2022-09-02 09:13:06.829[traceId=dd3edb9d-5794-4c29-bfe8-fa2cd585e88f] INFO  c.i.SJ.api.service.UserServiceImpl.login - [USER]
+2022-09-02 09:13:07.083[traceId=dd3edb9d-5794-4c29-bfe8-fa2cd585e88f] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc5Mzg2fQ.PU7SZAxs_A-WlmlyvQBgOpE7w9NYuwXPTf15K47dmM0
+2022-09-02 09:13:07.087[traceId=dd3edb9d-5794-4c29-bfe8-fa2cd585e88f] INFO  c.i.SJ.api.jwt.JwtTokenProvider.generateToken - eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODIzODZ9.X3nwjCOatYqc7jO7ksLcwjsFPoJ-fNaY_JSpIhGHSLU
+2022-09-02 09:13:07.089[traceId=dd3edb9d-5794-4c29-bfe8-fa2cd585e88f] INFO  c.i.SJ.api.service.UserServiceImpl.login - eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc5Mzg2fQ.PU7SZAxs_A-WlmlyvQBgOpE7w9NYuwXPTf15K47dmM0
+2022-09-02 09:13:10.000[traceId=dd3edb9d-5794-4c29-bfe8-fa2cd585e88f] INFO  c.i.SJ.api.config.LogInterceptor.postHandle - HTTP/1.1 /api/users/login POST 192.168.182.18 8080  2022-09-02 09:12:25.675 127.0.0.1 127.0.0.1 2022-09-02 09:13:09.993 {"state":200,"result":"success","massage":"로그인에 성공하였습니다","data":{"grantType":"Bearer","accessToken":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMUBleGFtcGxlLmNvbSIsImF1dGgiOiJVU0VSIiwiZXhwIjoxNjYyMDc5Mzg2fQ.PU7SZAxs_A-WlmlyvQBgOpE7w9NYuwXPTf15K47dmM0","refreshToken":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI2ODIzODZ9.X3nwjCOatYqc7jO7ksLcwjsFPoJ-fNaY_JSpIhGHSLU","refreshTokenExpirationTime":604800000},"error":[]}

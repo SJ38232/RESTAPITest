@@ -1,5 +1,6 @@
 package com.internProject.SJ.api.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,6 +13,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+
 
 import com.internProject.SJ.api.jwt.JwtAuthenticationFilter;
 import com.internProject.SJ.api.jwt.JwtTokenProvider;
@@ -46,4 +49,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().requestMatchers(PathRequest.toStaticResources().atCommonLocations());
     }
+	    
+	
 }

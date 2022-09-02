@@ -13,8 +13,6 @@ import com.internProject.SJ.api.entity.User;
 import com.internProject.SJ.api.service.UserServiceImpl;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-@Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/api/users")
 @RestController

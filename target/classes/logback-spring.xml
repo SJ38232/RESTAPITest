@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>     
 	<property name="LOG_PATH" value="./logs"/>
-	<property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [traceId=%X{traceId}] %-5level %logger{36}.%M - %msg%n"></property>
+	<property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS}[traceId=%X{traceId}] %-5level %logger{36}.%M - %msg%n"></property>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">        
 		<encoder>            
 			<pattern>${LOG_PATTERN}</pattern>
