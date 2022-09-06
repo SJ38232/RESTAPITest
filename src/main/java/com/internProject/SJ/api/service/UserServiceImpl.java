@@ -51,9 +51,7 @@ public class UserServiceImpl implements UserService{
 		}
 		UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userParam.getUsername(),userParam.getPassword());
 		Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
-		log.info(authentication.getAuthorities().toString());
 		JwtToken jwtToken =jwtTokenProvider.generateToken(authentication);
-		log.info(jwtToken.getAccessToken());
 		return response.success(jwtToken,"로그인에 성공하였습니다", HttpStatus.OK);
 	}
 

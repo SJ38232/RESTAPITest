@@ -8,6 +8,7 @@ import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -40,7 +41,20 @@ public class LogInterceptor implements HandlerInterceptor{
 			logData.setDertIpNm(Inet4Address.getLocalHost().getHostAddress());
 			logData.setDertPortNm(String.valueOf(request.getLocalPort()));	
 			logData.setDertPamtNm(IOUtils.toString(request.getInputStream(), request.getCharacterEncoding()));
+			if(logData.getDertPamtNm().equals("")) {
+				Enumeration<String> params = request.getParameterNames();
+				String strParam = "{";
+				while(params.hasMoreElements()) {
+					String name = (String)params.nextElement();
+					String value = request.getParameter(name);
+					strParam += "\"" + name + "\"" + ":\"" + value + "\",";
+					}
+				strParam = strParam.substring(0, strParam.length()-1);
+				strParam += "}";
+				logData.setDertPamtNm(strParam);
+			}
 			logData.setReqStDtm(timestamp.toString());
+			
 		}
 		return true;
 	}

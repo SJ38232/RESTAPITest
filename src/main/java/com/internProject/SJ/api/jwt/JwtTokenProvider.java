@@ -43,12 +43,10 @@ public class JwtTokenProvider {
 				.setExpiration(accessTokenExpiresIn)
 				.signWith(key, SignatureAlgorithm.HS256)
 				.compact();
-		log.info(accessToken);
 		String refreshToken = Jwts.builder()
                 .setExpiration(new Date(now + REFRESH_TOKEN_EXPIRE_TIME))
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
-		log.info(refreshToken);
 		return JwtToken.builder().grantType(BEARER_TYPE)
 				.accessToken(accessToken)
 				.refreshToken(refreshToken)
@@ -74,13 +72,9 @@ public class JwtTokenProvider {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
             return true;
         } catch (io.jsonwebtoken.security.SecurityException | MalformedJwtException e) {
-            log.info("Invalid JWT Token", e);
         } catch (ExpiredJwtException e) {
-            log.info("Expired JWT Token", e);
         } catch (UnsupportedJwtException e) {
-            log.info("Unsupported JWT Token", e);
         } catch (IllegalArgumentException e) {
-            log.info("JWT claims string is empty.", e);
         }
         return false;
     }
