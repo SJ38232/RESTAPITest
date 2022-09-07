@@ -63,7 +63,7 @@ public class LogInterceptor implements HandlerInterceptor{
 		if(response instanceof ResponseWrapper) {
 			Timestamp timestamp= new Timestamp(new Date().getTime());
 			logData.setArivlIpNm(getIp(request.getRequestURI().toString()));
-			logData.setArivlPortNm(getIp(request.getRequestURI().toString()));
+			logData.setArivlPortNm(getPort(request.getRequestURI().toString()));
 			logData.setReqEndDtm(timestamp.toString());
 			logData.setReqRsltVal(IOUtils.toString(((ResponseWrapper)response).getContentInputStream(), request.getCharacterEncoding()));
 			log.info(logData.getHttpEvntNm()+ " "+
@@ -93,6 +93,15 @@ public class LogInterceptor implements HandlerInterceptor{
 			
 		}
 		return ip;
+	}
+	private static String getPort(String pStrUri) {
+		String port = "";
+		try {
+			URI uri = new URI(pStrUri);
+			port = String.valueOf(uri.getPort());
+		} catch (URISyntaxException e) {
+		} 
+		return port;
 	}
 	
 }
