@@ -1,4 +1,4 @@
-package com.internProject.SJ.api.model;
+package com.internProject.SJ.api.entity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,10 +19,15 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
+@Table(name="user", schema = "public")
 @RequiredArgsConstructor
 public class User implements UserDetails{
+
+	@Id
+	@GeneratedValue
 	private Long id;
 	private String email;
 	private String name;
@@ -32,7 +37,6 @@ public class User implements UserDetails{
 	private int chesswin;
 	private int chesslose;
 	private String authority;
-	
 	@Builder
 	public User(String email,String name,String password, String authority) {
 		this.email = email;

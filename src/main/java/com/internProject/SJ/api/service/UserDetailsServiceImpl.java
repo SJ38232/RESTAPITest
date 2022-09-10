@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import com.internProject.SJ.api.entity.User;
 import com.internProject.SJ.api.jwt.JwtTokenProvider;
-import com.internProject.SJ.api.model.User;
 import com.internProject.SJ.api.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;

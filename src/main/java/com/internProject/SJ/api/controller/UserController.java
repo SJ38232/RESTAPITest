@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.internProject.SJ.api.model.Response;
-import com.internProject.SJ.api.model.User;
+import com.internProject.SJ.api.entity.Response;
+import com.internProject.SJ.api.entity.User;
 import com.internProject.SJ.api.service.UserServiceImpl;
 
 import lombok.RequiredArgsConstructor;
