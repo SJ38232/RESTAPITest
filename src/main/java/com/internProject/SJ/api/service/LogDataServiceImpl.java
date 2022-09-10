@@ -2,7 +2,7 @@ package com.internProject.SJ.api.service;
 
 import org.springframework.stereotype.Service;
 
-import com.internProject.SJ.api.model.LogData;
+import com.internProject.SJ.api.entity.LogData;
 import com.internProject.SJ.api.repository.LogDataRepository;
 
 import lombok.RequiredArgsConstructor;

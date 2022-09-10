@@ -19,8 +19,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.apache.commons.io.*;
-
-import com.internProject.SJ.api.model.LogData;
+import com.internProject.SJ.api.entity.LogData;
 import com.internProject.SJ.api.service.LogDataService;
 
 import lombok.RequiredArgsConstructor;

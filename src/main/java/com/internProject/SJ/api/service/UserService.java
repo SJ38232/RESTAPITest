@@ -2,7 +2,7 @@ package com.internProject.SJ.api.service;
 
 import org.springframework.http.ResponseEntity;
 
-import com.internProject.SJ.api.model.User;
+import com.internProject.SJ.api.entity.User;
 
 public interface UserService {
 	public ResponseEntity<?> register(User user);
