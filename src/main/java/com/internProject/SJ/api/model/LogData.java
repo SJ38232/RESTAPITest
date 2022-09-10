@@ -1,4 +1,4 @@
-package com.internProject.SJ.api.entity;
+package com.internProject.SJ.api.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,14 +9,10 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-@Table(name="logdata", schema = "public")
 @RequiredArgsConstructor
 public class LogData {
-	@Id
-	@GeneratedValue
 	private Long Id;
 	private String httpEvntNm; // HTTP이벤트명
 	private String urlAddrNm; // URL주소명

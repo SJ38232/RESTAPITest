@@ -10,10 +10,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.internProject.SJ.api.entity.Response;
-import com.internProject.SJ.api.entity.User;
 import com.internProject.SJ.api.jwt.JwtToken;
 import com.internProject.SJ.api.jwt.JwtTokenProvider;
+import com.internProject.SJ.api.model.Response;
+import com.internProject.SJ.api.model.User;
 import com.internProject.SJ.api.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
