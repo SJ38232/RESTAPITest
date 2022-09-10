@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.internProject.SJ.api.mapper.UserMapper">
+	
+	<select id="findByEmail" parameterType="String" resultType="com.internProject.SJ.api.model.User">
+		SELECT *
+		FROM USER
+		WHERE EMAIL = #{email}
+	</select>
+	<select id="existsByEmail" parameterType="String" resultType="boolean">
+		SELECT if(COUNT(EMAIL) = 1,1,0)
+		FROM USER
+		WHERE EMAIL = #{email}
+	</select>
+	<insert id="save" parameterType="com.internProject.SJ.api.model.User">
+		INSERT INTO USER(NAME,PASSWORD,EMAIL)
+		VALUES (#{name},#{password},#{email})
+	
+	</insert>
+
+</mapper>
