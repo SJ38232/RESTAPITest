@@ -1,4 +1,4 @@
-package com.internProject.SJ.api.entity;
+package com.internProject.SJ.api.model;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;

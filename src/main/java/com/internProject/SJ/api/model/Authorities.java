@@ -1,4 +1,4 @@
-package com.internProject.SJ.api.entity;
+package com.internProject.SJ.api.model;
 
 public enum Authorities {
 	USER,ADNIM;
