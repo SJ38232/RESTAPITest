@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.condition.ParamsRequestCondition;
 import org.apache.commons.io.*;
 import com.internProject.SJ.api.entity.LogData;
 import com.internProject.SJ.api.service.LogDataService;
@@ -41,7 +42,7 @@ public class LogInterceptor implements HandlerInterceptor{
 			logData.setDertIpNm(Inet4Address.getLocalHost().getHostAddress());
 			logData.setDertPortNm(String.valueOf(request.getLocalPort()));	
 			logData.setDertPamtNm(IOUtils.toString(request.getInputStream(), request.getCharacterEncoding()));
-			if(logData.getDertPamtNm().equals("")) {
+			if(logData.getDertPamtNm().equals("") && request.getParameterMap().size() != 0) {
 				Enumeration<String> params = request.getParameterNames();
 				String strParam = "{";
 				while(params.hasMoreElements()) {
@@ -51,6 +52,9 @@ public class LogInterceptor implements HandlerInterceptor{
 					}
 				strParam = strParam.substring(0, strParam.length()-1);
 				strParam += "}";
+				logData.setDertPamtNm(strParam);
+			}else if(request.getParameterMap().size() == 0){
+				String strParam = "{}";
 				logData.setDertPamtNm(strParam);
 			}
 			logData.setReqStDtm(timestamp.toString());

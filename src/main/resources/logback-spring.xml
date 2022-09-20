@@ -3,15 +3,37 @@
 	<property name="LOG_PATH" value="./logs"/>
 	<property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS}[traceId=%X{traceId}] %-5level %logger{36}.%M - %msg%n"></property>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">        
-		<encoder>            
-			<pattern>${LOG_PATTERN}</pattern>
-		</encoder>
+		<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+			<providers>
+				<pattern>
+					<pattern>{"serviceID":"access"}</pattern>
+				</pattern>
+				<logLevel/>
+				<timestamp/>            
+				<threadName/>
+				<message/>
+				<loggerName/>
+				<stackTrace/>
+				<callerData/>
+			</providers>            
+		</encoder> 
 	</appender>
 	<appender name="DAILY_ROLLING_FILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH}/logback.log</file>
-        <encoder>
-            <pattern>${LOG_PATTERN}</pattern>
-        </encoder>
+        	<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+				<providers>
+					<pattern>
+						<pattern>{"serviceID":"access"}</pattern>
+					</pattern>
+					<logLevel/>
+					<timestamp/>       
+					<threadName/>
+					<message/>
+					<loggerName/>
+					<stackTrace/>
+					<callerData/>
+				</providers>            
+			</encoder> 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${LOGS_PATH}/logback.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -20,10 +42,24 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
     </appender>
-    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashAccessTcpSocketAppender">
-        <destination>119.199.132.13:50000</destination>
-        <encoder class="net.logstash.logback.encoder.LogstashAccessEncoder" />
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    	<destination>119.199.132.13:50000</destination>
+    	<encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+			<providers>
+				<pattern>
+					<pattern>{"serviceID":"access"}</pattern>
+				</pattern>
+				<logLevel/>
+				<timestamp/>            
+				<threadName/>
+				<message/>
+				<loggerName/>
+				<stackTrace/>
+				<callerData/>
+			</providers>            
+		</encoder> 
     </appender>
+
 	<springProfile name="!(dev | prod)">
 		<root level="info">
 			<appender-ref ref="CONSOLE"/>
